@@ -1,0 +1,228 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar i {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.navbar-brand img {
+    width: 70px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #f8b400;
+    background: #263b5c;
+    padding: .5rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all .5s ease;
+}
+
+.dropdown-menu {
+    border: none;
+}
+
+.dropdown-item:hover {
+    color: #f8b400;
+    background: #263b5c;
+    padding: .5rem;
+    letter-spacing: 1px;
+    transition: all .5s ease;
+}
+
+.navwidth {
+    width: 100%;
+    padding-left: 1.5rem;
+    background-color: #edf0f5;
+}
+
+.navbar-toggler {
+    box-shadow: none;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    padding: .4rem;
+    border: grey 1px solid;
+    border-radius: 50%;
+}
+
+.form-control:focus {
+    border: 1px solid #ced4da;
+    box-shadow: none;
+}
+
+ul {
+    padding-left: .5rem;
+}
+
+.sects {
+    padding: 1rem;
+}
+
+.sects h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #263b5c;
+    margin-top: 2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sects h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #263b5c;
+    margin-top: 2rem;
+}
+
+.do-links {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.do-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: #263b5c;
+    color: white;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.do-links a:hover {
+    background: #f8b400;
+    color: #263b5c;
+    letter-spacing: 1px;
+    transition: all .5s ease;
+    font-weight: 600;
+}
+
+.footer {
+    background-color: #263b5c;
+    padding: 2rem 0;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #f8b400;
+    letter-spacing: .5px;
+    transition: all .5s ease;
+}
+
+.leon {
+    background-color: #745910;
+    color: white;
+    padding: 0.2rem;
+}
+
+.leon:hover {
+    background-color: #263b5c;
+    color: white;
+    text-decoration: underline;
+}
+
+.how-to {
+    background-color: #263b5c;
+    color: white;
+    width: 100%;
+    padding: 2rem;
+    border-radius: .2rem;
+}
+
+.btwork {
+    margin-top: 2rem;
+    background-color: #263b5c;
+    color: white;
+    padding: 2rem;
+    border-radius: .2rem;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 50px;
+    }
+
+    .navbar i {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+
+    ul {
+        padding-left: .5rem;
+    }
+
+    .sects h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #263b5c;
+        text-align: center;
+        margin: 0 auto;
+        width: auto;
+    }
+
+    .sects h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #263b5c;
+        margin-top: 1.2rem;
+    }
+
+    .do-links {
+        display: flex;
+        margin-top: 1.5rem;
+    }
+
+    .do-links a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        background: #263b5c;
+        color: white;
+        padding: .5rem;
+        border-radius: 5px;
+    }
+
+    .do-links a:hover {
+        background: #f8b400;
+        color: #263b5c;
+        letter-spacing: 1px;
+        transition: all .5s ease;
+        font-weight: 600;
+    }
+
+    .btwork h1 {
+        font-size: 1.4rem;
+    }
+
+}

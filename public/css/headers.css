@@ -1,0 +1,71 @@
+.header {
+    margin-top: 5.2rem;
+}
+
+.header> :first-child {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 50vh;
+}
+
+.contact {
+    background: linear-gradient(to top, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .6)), url("../images/contact.jpg") no-repeat center/cover;
+}
+
+.home {
+    background: linear-gradient(to top, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .6)), url("../images/home.jpg") no-repeat center/cover;
+}
+
+.work {
+    background: linear-gradient(to top, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .6)), url("../images/home.jpg") no-repeat center/cover;
+}
+
+.activity {
+    background: linear-gradient(to top, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .6)), url("../images/home.jpg") no-repeat center/cover;
+}
+
+.home> :first-child {
+    width: 70%;
+}
+
+.header h3 {
+    font-size: 4rem;
+}
+
+.header p {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.header h3:hover {
+    transition: all .5s ease-in-out;
+    background-color: #f8b400;
+    transform: scale(1.1);
+    color: #263b5c;
+}
+
+/* home page carousol */
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        margin-top: 3.2rem;
+    }
+
+    .header h3 {
+        font-size: 3rem;
+    }
+
+    .header p {
+        font-size: 1.1rem;
+    }
+
+    .home> :first-child {
+        width: 90%;
+    }
+}
