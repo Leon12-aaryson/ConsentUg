@@ -4,7 +4,7 @@
     <div class="home">
         <div class="container">
             <h3>Consumer protection and safety</h3>
-            <p>Consent prioritizes safety first, ensuring your food is secure and ethival representation of consumers
+            <p>Consent prioritizes safety first, ensuring your food is secure and ethical representation of consumers
             </p>
         </div>
     </div>
@@ -69,75 +69,75 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="events">
-        <h1 class="mb-2 text-center">Upcoming Events</h1>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card shadow">
-                    <img src="images/consumerrights.png" alt="Event 1" class="event-img">
-                    <div class="event-info">
-                        <h3>World Consumer Rights Day</h3>
-                        <p>Event 1 description</p>
-                        <div class="do-links">
-                            <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+        <div class="events">
+            <h1 class="mb-2 text-center">Upcoming Events</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <img src="images/consumerrights.png" alt="Event 1" class="event-img">
+                        <div class="event-info">
+                            <h3>World Consumer Rights Day</h3>
+                            {{-- <p>Event 1 description</p> --}}
+                            <div class="do-links">
+                                <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow">
-                    <img src="images/foodday.jpg" alt="Event 2" class="event-img">
-                    <div class="event-info">
-                        <h3>World Food Day</h3>
-                        <p>Event 2 description</p>
-                        <div class="do-links">
-                            <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <img src="images/foodday.jpg" alt="Event 2" class="event-img">
+                        <div class="event-info">
+                            <h3>World Food Day</h3>
+                            {{-- <p>Event 2 description</p> --}}
+                            <div class="do-links">
+                                <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow">
-                    <img src="images/exhib.jpg" alt="Event 3" class="event-img">
-                    <div class="event-info">
-                        <h3>Consumer Exhibition</h3>
-                        <p>Consumer Exhibition</p>
-                        <div class="do-links">
-                            <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <img src="images/exhib.jpg" alt="Event 3" class="event-img">
+                        <div class="event-info">
+                            <h3>Consumer Exhibition</h3>
+                            {{-- <p>Consumer Exhibition</p> --}}
+                            <div class="do-links">
+                                <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="partners py-5">
-        <h1 class="mb-4">Our Partners</h1>
-        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
-            <a href="#"><img src="images/afrifoods.jpg" alt="Afrifoods" class="partner-logo"></a>
-            <a href="https://foscu.org" target="_blank"><img src="images/foscu.jpg" alt="Foscu" class="partner-logo"></a>
-            <a href="https://www.rikolto.org/" target="_blank"><img src="images/rikolto.png" alt="Rikolto"
-                    class="partner-logo"></a>
-            <a href="#"><img src="images/biovision.jpg" alt="Biovision" class="partner-logo"></a>
-            <a href="#"><img src="images/CGAlogo.png" alt="CGA Logo" class="partner-logo"></a>
-            <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+        <div class="partners py-5">
+            <h1 class="mb-4">Our Partners</h1>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                <a href="#"><img src="images/afrifoods.jpg" alt="Afrifoods" class="partner-logo"></a>
+                <a href="https://foscu.org" target="_blank"><img src="images/foscu.jpg" alt="Foscu"
+                        class="partner-logo"></a>
+                <a href="https://www.rikolto.org/" target="_blank"><img src="images/rikolto.png" alt="Rikolto"
+                        class="partner-logo"></a>
+                <a href="#"><img src="images/biovision.jpg" alt="Biovision" class="partner-logo"></a>
+                <a href="#"><img src="images/CGAlogo.png" alt="CGA Logo" class="partner-logo"></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+            </div>
         </div>
-    </div>
 
-    <div class="newsletter">
-        <h3>Subscribe to our newsletter</h3>
-        {{-- <h5>Subscribe to our newsletter for updates, tips, and inspiring stories to navigate the consumer landscape with
-                confidence.
-            </h5> --}}
-        <form action="">
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
-            </div>
-            <button type="submit" class="btn btn-newsletter">Subscribe</button>
-        </form>
-    </div>
+        <div class="newsletter">
+            <h3>Subscribe to our newsletter</h3>
+            {{-- <h5>Subscribe to our newsletter for updates, tips, and inspiring stories to navigate the consumer landscape with
+                    confidence.
+                </h5> --}}
+            <form action="">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <button type="submit" class="btn btn-newsletter">Subscribe</button>
+            </form>
+        </div>
     </div>
 @endsection

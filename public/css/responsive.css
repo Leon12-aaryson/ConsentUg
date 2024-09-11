@@ -72,9 +72,15 @@
     }
 
     .newsletter h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         margin-bottom: 0.5rem;
         font-weight: 600;
         color: #263b5c;
+    }
+
+    .vision h1, .mission h1 {
+        color: white;
+        margin-bottom: .5rem;
+        font-size: 1.3rem;
     }
 }

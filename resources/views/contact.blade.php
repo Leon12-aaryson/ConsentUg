@@ -49,4 +49,14 @@
             </div>
         </div>
     </div>
+    {{-- <h1>Championing Consumer Empowerment</h1>
+    <p>Consent stands as a leading force, actively shaping a sustainable, equitable, and consumer-centric world. Formerly
+        known
+        as Consumer Education Trust, our unwavering dedication lies in empowering consumers, promoting ethical practices,
+        and
+        advocating for policies that prioritize people's well-being. Grounded in integrity, determination, and a commitment
+        to
+        tangible outcomes, our team of advocates collaborates with businesses, policymakers, and consumers to ensure a
+        socially
+        informed and just consumer experience.</p> --}}
 @endsection

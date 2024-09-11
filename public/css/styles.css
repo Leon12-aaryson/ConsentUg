@@ -229,6 +229,26 @@ ul {
     margin-top: 2rem;
 }
 
+.events h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #263b5c;
+    margin-top: 2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.events h1::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #f8b400;
+    margin: 0 auto;
+    margin-top: .5rem;
+}
+
 .event-info {
     padding: 1rem;
     margin-bottom: 1rem;
@@ -237,8 +257,8 @@ ul {
 .event-info h3 {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #263b5c;
     margin-top: 2rem;
+    color: #263b5c;
     margin: 0 auto;
 }
 
@@ -298,4 +318,45 @@ ul {
     color: #f8b400;
     letter-spacing: 1px;
     transition: all .5s ease;
+}
+
+.about-details {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #263b5c;
+    margin-top: 2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.about-info {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.about-info h3 {
+    font-weight: 500;
+    color: #263b5c;
+    margin-bottom: 1rem;
+}
+
+.vision h1, .mission h1 {
+    color: white;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.vision, .mission {
+    color: white !important;
+    background-color: #263b5c;
+    padding: 1rem;
+    border-radius: .2rem;
+    margin: 0.5rem;
 }
