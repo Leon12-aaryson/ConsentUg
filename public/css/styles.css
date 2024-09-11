@@ -109,6 +109,22 @@ ul {
     border-radius: 5px;
 }
 
+.welcome .do-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: #f8b400;
+    color: #263b5c;
+    padding: .5rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.welcome .do-links a:hover {
+    background: #f8b400;
+    color: #263b5c;
+}
+
 .do-links a:hover {
     background: #f8b400;
     color: #263b5c;
@@ -163,66 +179,123 @@ ul {
     text-align: center;
 }
 
+.welcome {
+    background-color: #263b5c;
+    color: white;
+    padding: 2rem;
+    border-radius: .2rem;
+    /* text-align: center; */
+}
 
-@media (max-width: 768px) {
-    .navbar-brand img {
-        width: 50px;
-    }
+.card {
+    border: none;
+    color: #263b5c;
+    border-radius: .2rem;
+    margin-top: 1rem;
+}
 
-    .navbar i {
-        font-size: 1.2rem;
-    }
+.approach-info {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
 
-    .nav-link {
-        font-size: 1rem;
-    }
+.approach-info h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #263b5c;
+    margin-bottom: 1rem;
+}
 
+.approach-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    color: #263b5c;
+    margin-top: 2rem;
+}
 
-    ul {
-        padding-left: .5rem;
-    }
+.approach-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #f8b400;
+    margin: 0 auto;
+    margin-top: .5rem;
+}
 
-    .sects h1 {
-        font-size: 2rem;
-        font-weight: 500;
-        color: #263b5c;
-        text-align: center;
-        margin: 0 auto;
-        width: auto;
-    }
+.events {
+    padding: 1rem;
+    margin-top: 2rem;
+}
 
-    .sects h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #263b5c;
-        margin-top: 1.2rem;
-    }
+.event-info {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
 
-    .do-links {
-        display: flex;
-        margin-top: 1.5rem;
-    }
+.event-info h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #263b5c;
+    margin-top: 2rem;
+    margin: 0 auto;
+}
 
-    .do-links a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        background: #263b5c;
-        color: white;
-        padding: .5rem;
-        border-radius: 5px;
-    }
+.partners {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
 
-    .do-links a:hover {
-        background: #f8b400;
-        color: #263b5c;
-        letter-spacing: 1px;
-        transition: all .5s ease;
-        font-weight: 600;
-    }
+.partners h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #263b5c;
+    margin-top: 2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
 
-    .btwork h1 {
-        font-size: 1.4rem;
-    }
+.partners h1::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #f8b400;
+    margin: 0 auto;
+    margin-top: .5rem;
+}
 
+.newsletter {
+    color: #263b5c;
+    width: 50%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.newsletter h5 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    padding: 0.2rem;
+    color: #745910;
+    /* color: #263b5c; */
+}
+
+.btn-newsletter {
+    background-color: #f8b400;
+    color: #263b5c;
+    border: none;
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-newsletter:hover {
+    background-color: #263b5c;
+    color: #f8b400;
+    letter-spacing: 1px;
+    transition: all .5s ease;
 }

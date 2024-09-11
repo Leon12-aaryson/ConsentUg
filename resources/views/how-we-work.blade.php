@@ -12,7 +12,7 @@
         <div class="">
             <div class="text-center m-auto">
                 <h1 class="text-center">Our commitment to empowerment, justice, and sustainable progress</h1>
-                <p>Our approach at Global Consumer Centre is rooted in consumers' empowerment and access to justice. We
+                <p class="mt-4">Our approach at Global Consumer Centre is rooted in consumers' empowerment and access to justice. We
                     raise awareness, enhance capacity, and advocate for equity, social responsibility, and good governance.
                     With a focus on sustainable AgriFood systems, trade and economics, environment and health, and quality
                     utilities and social services, we strive to ensure access to quality, safety, and sustainable
@@ -80,7 +80,7 @@
         <div class="">
             <div class="text-center m-auto">
                 <h1>Informative Resources for Rights and Responsibilities</h1>
-                <p>Global Consumer Centre unlocks economic potential and fosters prosperity. Our strategic programs
+                <p class="mt-4">Global Consumer Centre unlocks economic potential and fosters prosperity. Our strategic programs
                     prioritize
                     raising awareness, enhancing capacities, and offering advisory services for good governance. Visit our
                     dedicated Resources page to explore comprehensive information on consumer rights and responsibilities,

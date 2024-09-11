@@ -1,0 +1,80 @@
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 50px;
+    }
+
+    .navbar i {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+
+    ul {
+        padding-left: .5rem;
+    }
+
+    .sects h1 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #263b5c;
+        text-align: center;
+        margin: 0 auto;
+        width: auto;
+    }
+
+    .sects h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #263b5c;
+        margin-top: 1.2rem;
+    }
+
+    /* .how-to>h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #263b5c;
+        margin-top: 1.2rem;
+    } */
+
+    .do-links {
+        display: flex;
+        margin-top: 1.5rem;
+    }
+
+    .do-links a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        background: #263b5c;
+        color: white;
+        padding: .5rem;
+        border-radius: 5px;
+    }
+
+    .do-links a:hover {
+        background: #f8b400;
+        color: #263b5c;
+        letter-spacing: 1px;
+        transition: all .5s ease;
+        font-weight: 600;
+    }
+
+    .btwork h1 {
+        font-size: 1.4rem;
+    }
+
+    .newsletter {
+        color: #263b5c;
+        width: 100%;
+    }
+
+    .newsletter h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #263b5c;
+    }
+}
