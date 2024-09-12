@@ -9,15 +9,65 @@
 </div>
 @section('body')
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Events</h1>
-                <p>Here are some of our upcoming events:</p>
-                <ul>
-                    <li><a href="/event/1">Event 1</a></li>
-                    <li><a href="/event/2">Event 2</a></li>
-                    <li><a href="/event/3">Event 3</a></li>
-                </ul>
+        <div class="events">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow">
+                            <img src="images/consumer-rights.png" alt="">
+                            <div class="event-info">
+                                <h3>World Consumer Rights Day</h3>
+                                <div class="do-links">
+                                    <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow">
+                            <img src="images/foodday.jpg" alt="">
+                            <div class="event-info">
+                                <h3>World Food Day</h3>
+                                <div class="do-links">
+                                    <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow">
+                            <img src="images/exhib.jpg" alt="">
+                            <div class="event-info">
+                                <h3>Consumer Exhibition</h3>
+                                <div class="do-links">
+                                    <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow">
+                            <img src="images/workshops.png" alt="">
+                            <div class="event-info">
+                                <h3>We Want To Help</h3>
+                                <div class="do-links">
+                                    <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow">
+                            <img src="images/exhibitions.jpg" alt="">
+                            <div class="event-info">
+                                <h3>Empowering Consumers</h3>
+                                <div class="do-links">
+                                    <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

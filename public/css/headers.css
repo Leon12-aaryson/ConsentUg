@@ -28,6 +28,10 @@
     background: linear-gradient(to top, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .6)), url("../images/home.jpg") no-repeat center/cover;
 }
 
+.consumer {
+    background: linear-gradient(to top, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .6)), url("../images/consumer.png") no-repeat center/cover;
+}
+
 .home> :first-child {
     width: 70%;
 }
@@ -48,9 +52,6 @@
     transform: scale(1.1);
     color: #263b5c;
 }
-
-/* home page carousol */
-
 
 @media screen and (max-width: 768px) {
     .header {

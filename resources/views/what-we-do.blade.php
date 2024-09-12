@@ -3,7 +3,7 @@
 <div class="header">
     <div class="activity">
         <div class="container">
-            <h3>What We Do</h3>
+            <h3>Right To Inclusivity</h3>
         </div>
     </div>
 </div>
@@ -29,7 +29,7 @@
                         for fair pricing, fostering affordability, and expanding availability, creating a consumer-centric
                         world where access is a fundamental right for all.
                     </p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="consumer-access">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -38,7 +38,7 @@
                         disadvantaged consumers. We advocate for their protection, ensuring fair treatment, equal
                         opportunities, and access to essential resources, fostering a more equitable consumer landscape for
                         all.</p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="right-to-inclusivity">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -46,7 +46,7 @@
                     <p>Consent emphasizes the significance of consumer information, providing accessible and reliable
                         resources. We enable informed decision-making by ensuring clarity, accuracy, and transparency,
                         empowering consumers to make educated choices for their well-being and satisfaction.</p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="consumer-information">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -55,7 +55,7 @@
                         and mitigating risks. We strive to ensure fair pricing, quality assurance, and transparency,
                         empowering consumers to make financially sound decisions and safeguarding their economic well-being.
                     </p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="consumer-protection">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -64,7 +64,7 @@
                         transactions. We promote trust, privacy, and security, empowering consumers to navigate e-commerce
                         and digital realms with confidence and peace of mind.
                     </p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="digital-rights">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -73,7 +73,7 @@
                         for effective mechanisms that address consumer grievances, promote fairness, and provide timely
                         resolution, empowering consumers to seek justice and find resolution in consumer-related disputes.
                     </p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="consumer-redress">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">

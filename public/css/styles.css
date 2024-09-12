@@ -360,3 +360,19 @@ ul {
     border-radius: .2rem;
     margin: 0.5rem;
 }
+
+.consumer-access h1{
+    margin-bottom: 1rem;
+    /* font-size: 1.2rem; */
+    color: #263b5c;
+}
+
+.consumer-access h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f8b400;
+    /* margin: 0 auto; */
+    margin-top: .5rem;
+}
