@@ -29,7 +29,7 @@
                 <p>We raise awareness, enhance capacity, and provide advisory services to promote equity, social
                     responsibility, and good governance, empowering consumers to assert their rights and make informed
                     decisions.</p>
-                <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <div class="do-links"><a href="consumer-empowerment">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                 </div>
             </div>
             <div class="col-md-4 mt-4">
@@ -37,7 +37,7 @@
                 <p>We ensure access to quality and safe nutrition, promoting sustainable consumption and production
                     practices to address food loss and waste, and support the development of sustainable agricultural and
                     food systems.</p>
-                <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <div class="do-links"><a href="agrifood-systems">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                 </div>
             </div>
             <div class="col-md-4 mt-4">
@@ -46,7 +46,7 @@
                     production, fostering trade advocacy initiatives that prioritize fair practices and benefit both
                     consumers and businesses.
                 </p>
-                <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <div class="do-links"><a href="sustainable-trade">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                 </div>
             </div>
             <div class="col-md-4 mt-4">
@@ -54,7 +54,7 @@
                 <p>We promote access to quality and safety in consumer products, advocating for sustainable consumption and
                     production. Our focus is to protect the environment, enhance public health, and ensure a sustainable and
                     healthy future for all.</p>
-                <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <div class="do-links"><a href="environment">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                 </div>
             </div>
             <div class="col-md-4 mt-4">
@@ -63,7 +63,7 @@
                     and production practices. By prioritizing safety, reliability, and environmental stewardship, we enhance
                     the well-being of consumers in society.
                 </p>
-                <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <div class="do-links"><a href="quality-utilities">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                 </div>
             </div>
             <div class="col-md-4 mt-4">
@@ -71,7 +71,7 @@
                 <p>We champion equal digital protection and privacy rights for consumers, promoting the free flow of
                     information. Through guidelines and regulations, we safeguard consumer data and foster responsible
                     digital practices for a secure online environment.</p>
-                <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <div class="do-links"><a href="digital-rights">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@
                 associations, we strive for a safer, fairer, and more honest marketplace.
             </p>
             <div class="do-links">
-                <a href="#about">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                <a href="how-we-work">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
             </div>
         </div>
         <div class="approach">
@@ -37,7 +37,8 @@
                             <p>Empowering consumers, ensuring access to justice. Through awareness, advocacy, and a focus on
                                 equity, we foster a consumer-friendly environment.</p>
                             <div class="do-links">
-                                <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                                <a href="consumer-empowerment">Read More <span><i
+                                            class="bx bxs-chevron-right"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +50,7 @@
                             <p>Our focus is on building sustainable AgriFood systems that promote access to quality and safe
                                 food, nutrition, and sustainable consumption and production practices.</p>
                             <div class="do-links">
-                                <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                                <a href="agrifood-systems">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -62,7 +63,7 @@
                             <p>Our aim is to foster sustainable trade and economics that ensure access to quality and safe
                                 products, socio-economic justice, and sustainable consumption and production practices.</p>
                             <div class="do-links">
-                                <a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                                <a href="sustainable-trade">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                             </div>
                         </div>
                     </div>

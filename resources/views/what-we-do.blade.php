@@ -81,7 +81,7 @@
                     <p>Consent advocates for the freedom of consumers to form groups and actively participate in
                         decision-making processes. We amplify diverse voices, ensuring that consumer perspectives are
                         considered and influential in shaping policies that impact their rights and welfare.</p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="consumer-representation">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -89,7 +89,7 @@
                     <p>Consent fosters consumer education, enhancing understanding of transactions and the multifaceted
                         consequences they entail. We equip consumers with knowledge and insights, empowering them to make
                         informed choices that consider environmental, social, and economic impacts.</p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="consumer-education">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-4">
@@ -97,7 +97,7 @@
                     <p>Consent advocates for sustainable consumption, empowering consumers to make choices that minimize
                         environmental impact. We promote ethical practices, support eco-friendly initiatives, and inspire
                         individuals to contribute to a more sustainable future through their consumer behaviors.</p>
-                    <div class="do-links"><a href="">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
+                    <div class="do-links"><a href="sustainability">Read More <span><i class="bx bxs-chevron-right"></i></span></a>
                     </div>
                 </div>
             </div>
