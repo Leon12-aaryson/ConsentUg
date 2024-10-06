@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\UserController;
+
 
 Route::get('/', function () {
     return view('index');
@@ -83,3 +86,55 @@ Route::get('quality-utilities', function () {
 Route::get('environment', function () {
     return view('environment');
 })->name('environment');
+
+
+Route::get('dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('blogs', function () {
+    return view('blogs');
+})->name('blogs');
+
+Route::get('users', function () {
+    return view('users');
+})->name('users');
+
+Route::get('settings', function () {
+    return view('settings');
+})->name('settings');
+
+
+
+// Route to display the list of blogs and the creation form
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+
+// Route to handle storing a new blog
+Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+
+// Route to edit a blog
+Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
+
+// Route to update a blog
+Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('blogs.update');
+
+// Route to delete a blog
+Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+Route::get('/blog', [BlogController::class, 'showBlogPage'])->name('blog.index');
+
+
+
+// Route to display the list of users and the creation form
+Route::get('/users', [UserController::class, 'index'])->name('users.index');
+
+// Route to handle storing a new user
+Route::post('/users', [UserController::class, 'store'])->name('users.store');
+
+// Route to edit a user
+Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+
+// Route to update a user
+Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
+
+// Route to delete a user
+Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
