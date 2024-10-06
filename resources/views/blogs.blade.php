@@ -1,11 +1,13 @@
 @extends('layouts.app')
 @section('title', 'Blogs')
-@section('body')
-    <div class="contact">
+<div class="header">
+    <div class="consumer">
         <div class="container">
-            <h3>Contact Us</h3>
+            <h3>Consumer Center Blogs</h3>
         </div>
     </div>
+</div>
+@section('body')
     <div class="container">
         <div class="row">
             <div class="col-md-12">
