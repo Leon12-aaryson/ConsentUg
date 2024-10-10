@@ -1,29 +1,33 @@
 @extends('layouts.app')
-@section('title', 'Blog')
+@section('title', 'Blogs')
 <div class="header">
-    <div class="contact">
+    <div class="blogs">
         <div class="container">
-            <h3>Blog</h3>
+            <h3>Consumer Center Blogs</h3>
         </div>
     </div>
 </div>
 @section('body')
-    <div class="container">
-        <div class="the-how">
-            <div class="how-we-work">
-                <img src="images/how-we-work.jpg" alt="">
-            </div>
-            <h1>How We Work</h1>
-            <h3>Our commitment to empowerment, justice, and sustainable progress</h3>
-            <p>Our approach at Global Consumer Centre is rooted in consumers' empowerment and access to justice. We
-                raise
-                awareness, enhance capacity, and advocate for equity, social responsibility, and good governance. With a
-                focus
-                on sustainable AgriFood systems, trade and economics, environment and health, and quality utilities and
-                social
-                services, we strive to ensure access to quality, safety, and sustainable consumption and production.
-                Together,
-                we are driving positive change and creating a better future for consumers worldwide.</p>
+        <div class="row">
+            @forelse ($blogs as $blog)
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        @if ($blog->image)
+                            <img src="{{ asset('images/' . $blog->image) }}" class="card-img-top" alt="{{ $blog->title }}">
+                        @endif
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ $blog->title }}</h5>
+                            <p class="card-text">{{ Str::limit($blog->content, 100) }}</p>
+                            <p class="card-text"><small class="text-muted">By {{ $blog->author }}</small></p>
+                            <a href="{{ route('blogs.show', $blog->id) }}" class="btn btn-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            @empty
+                <div class="col-12">
+                    <p>No blogs available at the moment.</p>
+                </div>
+            @endforelse
         </div>
     </div>
 @endsection

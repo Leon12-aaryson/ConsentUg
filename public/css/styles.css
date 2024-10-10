@@ -69,8 +69,12 @@ body {
     box-shadow: none;
 }
 
-ul {
-    padding-left: .5rem;
+.form-group {
+    margin-bottom: 1rem;
+}
+
+ul{
+    margin-bottom: 3rem !important;
 }
 
 .sects {
