@@ -8,7 +8,7 @@
             @php
                 $routes = [
                     ['dashboard', 'bxs-dashboard', 'Dashboard'],
-                    ['blogs', 'bx-chat', 'Blog'],
+                    ['dashboard/blogs', 'bx-edit', 'Blog Management'],
                     ['users', 'bx-user', 'Users'],
                 ];
             @endphp
