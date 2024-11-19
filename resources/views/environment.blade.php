@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', 'Sustainable Environment and Health')
 <div class="header">
     <div class="consumer">
