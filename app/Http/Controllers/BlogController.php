@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Log;
 
 class BlogController extends Controller
 {
@@ -59,7 +60,7 @@ class BlogController extends Controller
         ];
 
         // Log debugging information
-        \Log::info('Blog page debug info:', $debugInfo);
+        Log::info('Blog page debug info:', $debugInfo);
 
         return view('blog', compact('blogs', 'debugInfo'));
     }
