@@ -11,8 +11,7 @@ class UserController extends Controller
     // Display the list of users and the form to create a new user
     public function index()
     {
-        $users = User::all();
-        return view('users', compact('users'));
+        return view('users');
     }
 
     // Handle storing a new user

@@ -27,43 +27,46 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     {{-- Custom styling for the app --}}
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/headers.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <link href="{{ asset('css/headers.css') }}" rel="stylesheet">
+
     <title>@yield('title')</title>
 </head>
 
 <body>
-    <nav class="navbar navwidth fixed-top navbar-expand-lg shadow-sm">
+    <nav class="navbar navwidth fixed-top navbar-expand-lg shadow-sm py-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="images/logo.png" alt="" srcset=""></a>
+            <a class="navbar-brand my-auto" href="/">
+                <img src="{{ asset('images/logo.png') }}" alt="" class="img-fluid">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class='bx bx-menu'></i>
             </button>
-            <div class="collapse navbar-collapse rouded-bottom" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto my-2 my-lg-0">
+                    <li class="nav-item my-auto">
                         <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item my-auto">
                         <a class="nav-link" href="about">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item my-auto">
                         <a class="nav-link" href="what-we-do">What We Do</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item my-auto">
                         <a class="nav-link" href="how-we-work">How We Work</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item my-auto">
                         <a class="nav-link" href="events">Events</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item my-auto">
                         <a class="nav-link" href="blog">Blog</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item my-auto">
                         <a class="nav-link" href="/contact">Contact Us</a>
                     </li>
                 </ul>

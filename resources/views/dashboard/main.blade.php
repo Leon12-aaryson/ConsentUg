@@ -17,16 +17,34 @@
 </head>
 
 <body>
-    <!-- Include sidebar -->
-    @include('dashboard.sidebar')
+    <div class="d-flex">
+        <!-- Sidebar -->
+        @include('dashboard.sidebar')
 
-    <div class="main-content">
-        <!-- Include header -->
-        @include('dashboard.header')
+        <!-- Main Content -->
+        <div class="main-content flex-grow-1">
+            <!-- Header -->
+            @include('dashboard.header')
 
-        <main>
-            @yield('content')
-        </main>
+            <!-- Main Content Area -->
+            <main class="p-4">
+                @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+
+                @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+
+                @yield('content')
+            </main>
+        </div>
     </div>
 
     <!-- Bootstrap JS -->
@@ -34,7 +52,28 @@
 
     <!-- Your custom JS -->
     <script>
-        // Add any custom JavaScript here
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.bx-menu');
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    sidebar.classList.toggle('collapsed');
+                    mainContent.classList.toggle('expanded');
+
+                    // Store the state in localStorage
+                    localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+                });
+
+                // Restore the previous state on page load
+                const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+                if (isCollapsed) {
+                    sidebar.classList.add('collapsed');
+                    mainContent.classList.add('expanded');
+                }
+            }
+        });
     </script>
 </body>
 
