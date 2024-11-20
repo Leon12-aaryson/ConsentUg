@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-primary {
+    @apply text-blue-600;
+}
+
+.bg-primary {
+    @apply bg-blue-600;
+}
+
+.bg-primary-dark {
+    @apply bg-blue-700;
+}
