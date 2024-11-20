@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', 'Newsroom')
 <div class="header">
     <div class="contact">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', 'Blogs')
 <div class="header">
     <div class="blogs">

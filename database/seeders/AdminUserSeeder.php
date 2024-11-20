@@ -17,10 +17,11 @@ class AdminUserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'Admin',
+            'name' => 'Super Admin',
             'email' => 'admin@consentug.org',
-            'password' => Hash::make('password'), // You can replace 'password' with your desired password
-            'is_admin' => true,
+            'password' => Hash::make('password'),
+            'role' => 'super_admin',
+            'is_active' => true,
             'created_at' => now(),
             'updated_at' => now(),
         ]);

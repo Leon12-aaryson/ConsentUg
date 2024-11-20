@@ -2,65 +2,106 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Blog;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
+    // Display all blogs for public view
     public function index()
     {
-        $blogs = Blog::all();
-        return view('index', compact('blogs'));
+        $blogs = Blog::latest()->get();
+        return view('blog', compact('blogs'));
     }
+
+    // Display single blog post
+    public function show($id)
+    {
+        $blog = Blog::findOrFail($id);
+        return view('blogs.show', compact('blog'));
+    }
+
+    // Display blogs in dashboard
+    public function dashboard()
+    {
+        $blogs = Blog::latest()->get();
+        return view('dashboard.blogs', compact('blogs'));
+    }
+
+    // Store new blog post
     public function store(Request $request)
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'content' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:10048', // remove avif here
+            'content' => 'required|string',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'author' => 'required|string|max:255',
         ]);
 
-        // Additional validation for AVIF file extension
-        if ($request->file('image')->getClientOriginalExtension() === 'avif') {
-            // Check the mime type manually
-            if (mime_content_type($request->file('image')->getPathname()) !== 'image/avif') {
-                return back()->withErrors(['image' => 'The image must be a valid AVIF file.']);
-            }
-        }
-
         $imageName = time() . '.' . $request->image->extension();
-        // $request->image->move(public_path(path: 'images'), $imageName);
-
         $request->image->move(public_path('images'), $imageName);
 
-
         Blog::create([
-            'title' => $request->input('title'),
-            'content' => $request->input('content'),
+            'title' => $request->title,
+            'content' => $request->content,
             'image' => $imageName,
-            'author' => 'Leon',
-            // 'author' => auth()->user()->name,
-            'created_at' => now(),
+            'author' => auth()->user()->name,
         ]);
 
-        return redirect()->route('blogs.index')->with('success', 'Blog created successfully.');
+        return redirect()->route('dashboard.blogs')
+            ->with('success', 'Blog post created successfully.');
     }
 
-    public function showBlogPage()
+    // Update blog post
+    public function update(Request $request, $id)
     {
-        $blogs = Blog::latest()->get();
+        $blog = Blog::findOrFail($id);
 
-        // Add debugging information
-        $debugInfo = [
-            'blog_count' => $blogs->count(),
-            'first_blog' => $blogs->first(),
-            'blog_array' => $blogs->toArray(),
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'author' => 'required|string|max:255',
+        ]);
+
+        $data = [
+            'title' => $request->title,
+            'content' => $request->content,
+            'author' => $request->author,
         ];
 
-        // Log debugging information
-        \Log::info('Blog page debug info:', $debugInfo);
+        if ($request->hasFile('image')) {
+            // Delete old image
+            if ($blog->image) {
+                Storage::delete('public/images/' . $blog->image);
+            }
 
-        return view('blog', compact('blogs', 'debugInfo'));
+            // Store new image
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+            $data['image'] = $imageName;
+        }
+
+        $blog->update($data);
+
+        return redirect()->route('dashboard.blogs')
+            ->with('success', 'Blog post updated successfully.');
+    }
+
+    // Delete blog post
+    public function destroy($id)
+    {
+        $blog = Blog::findOrFail($id);
+
+        // Delete image if exists
+        if ($blog->image) {
+            Storage::delete('public/images/' . $blog->image);
+        }
+
+        $blog->delete();
+
+        return redirect()->route('dashboard.blogs')
+            ->with('success', 'Blog post deleted successfully.');
     }
 }

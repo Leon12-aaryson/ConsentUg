@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
@@ -31,22 +32,53 @@ Route::view('dashboard', 'dashboard')->name('dashboard');
 Route::view('users', 'users')->name('users');
 Route::view('settings', 'settings')->name('settings');
 
-// Blog Routes
+// Public blog routes
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blogs.show');
 
-Route::get('/blogs', [BlogController::class, 'index']);
-
-Route::view('blogs', 'blogs.index')->name('blogs.index');
-Route::post('blogs', [BlogController::class, 'store'])->name('blogs.store');
-Route::get('blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
-Route::put('blogs/{id}', [BlogController::class, 'update'])->name('blogs.update');
-Route::delete('blogs/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
-
-// Route to display individual blog posts
-Route::get('blog/{id}', [BlogController::class, 'show'])->name('blogs.show');
-
-// Route to display all blogs in a separate view (blog.blade.php)
-Route::get('blog', [BlogController::class, 'showBlogPage'])->name('blog.index');
+// Protected blog management routes
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard/blogs', [BlogController::class, 'dashboard'])->name('dashboard.blogs');
+    Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+    Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('blogs.update');
+    Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+});
 
 Route::get('/check-blogs', function () {
     dd(App\Models\Blog::all());
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    // Dashboard route
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    // Users route
+    Route::get('/users', function () {
+        return view('dashboard.users');
+    })->name('users');
+
+    // Settings route
+    Route::get('/settings', function () {
+        return view('dashboard.settings');
+    })->name('settings');
+
+    // Blog management routes
+    Route::get('/dashboard/blogs', [BlogController::class, 'dashboard'])->name('dashboard.blogs');
+    Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+    Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
+    Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+});
+
+require __DIR__.'/auth.php';

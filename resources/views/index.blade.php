@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', 'Home - Consent Uganda')
 <div class="header">
     <div class="home">
