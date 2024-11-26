@@ -4,9 +4,16 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Dashboard\ComplaintController;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\Dashboard\ReportController;
+use App\Http\Controllers\DashboardController;
 
 // Static Pages Routes
-Route::view('/', 'index');
+Route::view('/', 'index')->name('home');
 Route::view('about', 'about');
 Route::view('contact', 'contact');
 Route::view('events', 'events');
@@ -27,38 +34,55 @@ Route::view('sustainable-trade', 'sustainable-trade')->name('sustainable-trade')
 Route::view('quality-utilities', 'quality-utilities')->name('quality-utilities');
 Route::view('environment', 'environment')->name('environment');
 
-// Move all admin routes under domain constraint
-Route::domain('admin.consentug.org')->group(function () {
-    // Authentication routes
-    require __DIR__.'/auth.php';
+// Authentication routes
+require __DIR__.'/auth.php';
 
-    // Protected routes
-    Route::middleware(['auth', 'verified'])->group(function () {
-        // Dashboard route
-        Route::get('/dashboard', function () {
-            return view('dashboard');
-        })->name('dashboard');
+// Protected routes
+Route::middleware(['auth', 'verified'])->group(function () {
+    // Dashboard route
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->middleware(['auth', 'verified'])
+        ->name('dashboard');
 
-        // Users route
-        Route::get('/users', function () {
-            return view('dashboard.users');
-        })->name('users');
+    // Users route
+    Route::get('/users', function () {
+        return view('dashboard.users');
+    })->name('users');
 
-        // Settings route
-        Route::get('/settings', function () {
-            return view('dashboard.settings');
-        })->name('settings');
+    // Settings route
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 
-        // Blog management routes
-        Route::get('/dashboard/blogs', [BlogController::class, 'dashboard'])->name('dashboard.blogs');
-        Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
-        Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
-        Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+    // Blog management routes
+    Route::get('/dashboard/blogs', [BlogController::class, 'dashboard'])->name('dashboard.blogs');
+    Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+    Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
+    Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
 
-        // Profile routes
-        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // Profile routes
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Add these new routes
+    Route::get('/dashboard/complaints', [ComplaintController::class, 'index'])->name('dashboard.complaints.index');
+    Route::get('/dashboard/complaints/{complaint}', [ComplaintController::class, 'show'])->name('dashboard.complaints.show');
+    Route::delete('/dashboard/complaints/{complaint}', [ComplaintController::class, 'destroy'])->name('dashboard.complaints.destroy');
+
+    // Add these new routes
+    Route::get('/users', [UserController::class, 'index'])->name('users');
+    Route::post('/users', [UserController::class, 'store'])->name('users.store');
+    Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+    // Document routes
+    Route::post('/documents', [DocumentController::class, 'store'])->name('documents.store');
+    Route::get('/documents/{document}/download', [DocumentController::class, 'download'])->name('documents.download');
+    Route::delete('/documents/{document}', [DocumentController::class, 'destroy'])->name('documents.destroy');
+
+    Route::prefix('dashboard')->name('dashboard.')->group(function () {
+        Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
+        Route::post('/reports', [ReportController::class, 'store'])->name('reports.store');
+        Route::get('/reports/{document}/download', [ReportController::class, 'download'])->name('reports.download');
+        Route::delete('/reports/{document}', [ReportController::class, 'destroy'])->name('reports.destroy');
     });
 });
 
@@ -70,10 +94,10 @@ Route::get('/check-blogs', function () {
     dd(App\Models\Blog::all());
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::get('/test-404', function() {
     abort(404);
 });
+
+Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

@@ -5,72 +5,42 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class UserController extends Controller
 {
-    // Display the list of users and the form to create a new user
     public function index()
     {
-        return view('users');
+        $users = User::orderBy('created_at', 'desc')->paginate(10);
+        return view('dashboard.users.index', compact('users'));
     }
 
-    // Handle storing a new user
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:8',
-            'is_admin' => 'boolean',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => ['required', Password::defaults()],
+            'role' => 'required|in:admin,editor,user'
         ]);
 
         User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'is_admin' => $request->is_admin,
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'password' => Hash::make($validated['password']),
+            'role' => $validated['role']
         ]);
 
-        return redirect()->route('users.index')->with('success', 'User created successfully.');
+        return redirect()->route('users')->with('success', 'User created successfully');
     }
 
-    // Edit a user (Show form)
-    public function edit($id)
+    public function destroy(User $user)
     {
-        $user = User::findOrFail($id);
-        return view('edit_user', compact('user'));
-    }
-
-    // Update a user
-    public function update(Request $request, $id)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . $id,
-            'password' => 'nullable|string|min:8',
-            'is_admin' => 'boolean',
-        ]);
-
-        $user = User::findOrFail($id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-
-        if ($request->filled('password')) {
-            $user->password = Hash::make($request->password);
+        if ($user->id === auth()->id()) {
+            return back()->with('error', 'You cannot delete your own account');
         }
 
-        $user->is_admin = $request->is_admin;
-        $user->save();
-
-        return redirect()->route('users.index')->with('success', 'User updated successfully.');
-    }
-
-    // Delete a user
-    public function destroy($id)
-    {
-        $user = User::findOrFail($id);
         $user->delete();
-
-        return redirect()->route('users.index')->with('success', 'User deleted successfully.');
+        return back()->with('success', 'User deleted successfully');
     }
 }

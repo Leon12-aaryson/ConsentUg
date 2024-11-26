@@ -50,19 +50,19 @@
                         <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="about">About</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="what-we-do">What We Do</a>
+                        <a class="nav-link" href="/what-we-do">What We Do</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="how-we-work">How We Work</a>
+                        <a class="nav-link" href="/how-we-work">How We Work</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="events">Events</a>
+                        <a class="nav-link" href="/events">Events</a>
                     </li>
                     <li class="nav-item my-auto">
-                        <a class="nav-link" href="blog">Blog</a>
+                        <a class="nav-link" href="/blog">Blog</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav my-2 my-lg-0">
@@ -92,11 +92,11 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="about">About</a></li>
-                        <li><a href="contact">Contact</a></li>
-                        <li><a href="what-we-do">What We Do</a></li>
-                        <li><a href="how-we-work">How We Work</a></li>
-                        <li><a href="events">Blog</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/what-we-do">What We Do</a></li>
+                        <li><a href="/how-we-work">How We Work</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">

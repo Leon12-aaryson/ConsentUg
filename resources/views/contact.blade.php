@@ -10,6 +10,18 @@
 </div>
 @section('body')
     <div class="container p-4">
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+        @if(session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="sects container">
             <h1>Empower tomorrow, Consume Today! <br> Consent's Movement for a Just World</h1>
             <p class="mt-4">
@@ -30,33 +42,32 @@
             </div>
             <div class="col-md-6">
                 <h4>Contact us to fuel the movement towards a better, more just consumer world!</h4>
-                <form action="/contact" method="POST">
+                <form action="{{ route('contact.store') }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
+                        @error('name')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+                        @error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        <textarea class="form-control @error('message') is-invalid @enderror" id="message" name="message" rows="3">{{ old('message') }}</textarea>
+                        @error('message')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-secondary">Send</button>
                 </form>
             </div>
         </div>
     </div>
-    {{-- <h1>Championing Consumer Empowerment</h1>
-    <p>Consent stands as a leading force, actively shaping a sustainable, equitable, and consumer-centric world. Formerly
-        known
-        as Consumer Education Trust, our unwavering dedication lies in empowering consumers, promoting ethical practices,
-        and
-        advocating for policies that prioritize people's well-being. Grounded in integrity, determination, and a commitment
-        to
-        tangible outcomes, our team of advocates collaborates with businesses, policymakers, and consumers to ensure a
-        socially
-        informed and just consumer experience.</p> --}}
 @endsection

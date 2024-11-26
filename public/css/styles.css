@@ -307,7 +307,7 @@ ul{
     /* color: #263b5c; */
 }
 
-.btn-newsletter {
+.btn-newsletter, .btn-blog:hover {
     background-color: #f8b400;
     color: #263b5c;
     border: none;
@@ -317,9 +317,9 @@ ul{
     font-weight: 600;
 }
 
-.btn-newsletter:hover {
+.btn-newsletter:hover, .btn-blog {
     background-color: #263b5c;
-    color: #f8b400;
+    color: #ffffff;
     letter-spacing: 1px;
     transition: all .5s ease;
 }
@@ -379,4 +379,11 @@ ul{
     background-color: #f8b400;
     /* margin: 0 auto; */
     margin-top: .5rem;
+}
+
+
+/* blog styling */
+.card-img-top{
+    height: 280px;
+    object-fit: cover;
 }

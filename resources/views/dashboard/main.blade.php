@@ -14,6 +14,9 @@
 
     <!-- Your custom CSS -->
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 </head>
 
 <body>

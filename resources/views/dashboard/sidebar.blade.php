@@ -9,7 +9,9 @@
                 $routes = [
                     [route('dashboard'), 'bxs-dashboard', 'Dashboard'],
                     [route('dashboard.blogs'), 'bx-edit', 'Blog Management'],
+                    [route('dashboard.complaints.index'), 'bx-message-square-detail', 'Complaints'],
                     [route('users'), 'bx-user', 'Users'],
+                    [route('dashboard.reports.index'), 'bx-file', 'Reports'],
                     [route('settings'), 'bx-cog', 'Settings'],
                     [route('logout'), 'bx-log-out', 'Log out'],
                 ];

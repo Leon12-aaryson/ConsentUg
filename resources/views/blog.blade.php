@@ -19,7 +19,7 @@
                             <h5 class="card-title">{{ $blog->title }}</h5>
                             <p class="card-text">{{ Str::limit($blog->content, 100) }}</p>
                             <p class="card-text"><small class="text-muted">By {{ $blog->author }}</small></p>
-                            <a href="{{ route('blogs.show', $blog->id) }}" class="btn btn-primary mt-auto">Read More</a>
+                            <a href="{{ route('blogs.show', $blog->id) }}" class="btn btn-blog mt-auto">Read More</a>
                         </div>
                     </div>
                 </div>

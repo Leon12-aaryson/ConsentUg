@@ -127,15 +127,30 @@
 
         <div class="newsletter">
             <h3>Subscribe to our newsletter</h3>
-            {{-- <h5>Subscribe to our newsletter for updates, tips, and inspiring stories to navigate the consumer landscape with
-                    confidence.
-                </h5> --}}
-            <form action="">
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            <form action="{{ route('newsletter.subscribe') }}" method="POST">
+                @csrf
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
+                    <input type="email" class="form-control @error('email') is-invalid @enderror"
+                           id="email" name="email" aria-describedby="emailHelp" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-newsletter">Subscribe</button>
             </form>
