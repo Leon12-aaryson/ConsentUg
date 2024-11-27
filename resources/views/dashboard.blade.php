@@ -68,7 +68,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h5 class="card-title mb-0">Recent Blog Posts</h5>
-                        <a href="{{ route('dashboard.blogs.index') }}" class="btn btn-sm btn-primary">View All</a>
+                        <a href="{{ route('dashboard.blogs') }}" class="btn btn-sm btn-primary">View All</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -116,7 +116,7 @@
                                         <th>Date</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                {{-- <tbody>
                                     @forelse($recentComplaints as $complaint)
                                         <tr>
                                             <td>{{ $complaint->name }}</td>
@@ -128,7 +128,7 @@
                                             <td colspan="3" class="text-center">No complaints yet</td>
                                         </tr>
                                     @endforelse
-                                </tbody>
+                                </tbody> --}}
                             </table>
                         </div>
                     </div>
