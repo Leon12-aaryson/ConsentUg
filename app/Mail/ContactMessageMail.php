@@ -21,7 +21,7 @@ class ContactMessageMail extends Mailable
     {
         return $this->from(config('mail.from.address'), config('mail.from.name'))
                     ->replyTo($this->messageData['email'], $this->messageData['name'])
-                    ->to('aaron@consentug.org')
+                    ->to('web@consentug.org')
                     ->subject('New Contact Form Message from ' . $this->messageData['name'])
                     ->view('emails.contact-message');
     }
