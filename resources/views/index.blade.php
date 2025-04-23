@@ -119,7 +119,7 @@
                         class="partner-logo"></a>
                 <a href="https://www.rikolto.org/" target="_blank"><img src="images/rikolto.png" alt="Rikolto"
                         class="partner-logo"></a>
-                <a href="#"><img src="images/biovision.jpg" alt="Biovision" class="partner-logo"></a>
+                <a href="#"><img src="images/Biovision.png" alt="Biovision" class="partner-logo"></a>
                 <a href="#"><img src="images/CGAlogo.png" alt="CGA Logo" class="partner-logo"></a>
                 <a href="http://" target="_blank" rel="noopener noreferrer"></a>
             </div>
