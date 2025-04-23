@@ -11,7 +11,7 @@ class BlogController extends Controller
     // Display all blogs for public view
     public function index()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::latest()->simplePaginate(6);
         return view('blog', compact('blogs'));
     }
 

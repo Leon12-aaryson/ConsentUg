@@ -32,36 +32,58 @@
                 <h1>Gallery Archives</h1>
                 <p class="mt-4">Discover our collection of images showcasing our initiatives, events, and impact in promoting consumer sustainability and advocacy.</p>
 
-                <div class="row mt-4">
-                    @forelse($galleries as $gallery)
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="{{ asset('storage/' . $gallery->image_path) }}" class="card-img-top" alt="{{ $gallery->title ?? 'Gallery Item' }}">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $gallery->title ?? 'Untitled' }}</h5>
-                                    <p class="card-text">{{ Str::limit($gallery->description, 100) ?? 'No description available.' }}</p>
+                <div class="row mt-4" id="gallery-container">
+                    @if($galleries->isEmpty())
+                        <div class="col-12">
+                            <p class="text-muted text-center">No gallery items available at this time.</p>
+                        </div>
+                    @else
+                        @foreach($galleries as $gallery)
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="{{ asset('storage/' . $gallery->image_path) }}" class="card-img-top" alt="{{ $gallery->title ?? 'Gallery Item' }}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $gallery->title }}</h5>
+                                        <p class="card-text">{{ $gallery->description }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @empty
-                        <p>No gallery items available.</p>
-                    @endforelse
+                        @endforeach
+                    @endif
                 </div>
+
+                <!-- Pagination for Gallery (only if items exist) -->
+                @if(!$galleries->isEmpty())
+                    <div class="mt-4">
+                        {{ $galleries->links() }}
+                    </div>
+                @endif
             </div>
 
             <!-- Reports Section (4 columns) -->
             <div class="col-md-4">
                 <h4>Recent Reports</h4>
-                <ul class="list-group">
-                    @forelse($reports as $report)
-                        <li class="list-group-item">
-                            <a href="{{ asset('storage/' . $report->file_path) }}" target="_blank">{{ $report->title ?? 'Untitled Report' }}</a>
-                            <small class="text-muted">{{ $report->created_at->format('M d, Y') }}</small>
-                        </li>
-                    @empty
-                        <li class="list-group-item">No reports available.</li>
-                    @endforelse
+                <ul class="list-group" id="reports-container">
+                    @if($reports->isEmpty())
+                        <li class="list-group-item text-muted">No reports available at this time.</li>
+                    @else
+                        @foreach($reports as $report)
+                            <li class="list-group-item">
+                                <a href="{{ $report->file_url }}" target="_blank">{{ $report->title }}</a>
+                                <small class="text-muted">{{ $report->created_at->format('M d, Y') }}</small>
+                            </li>
+                        @endforeach
+                    @endif
                 </ul>
+
+                <!-- Get More Link for Reports -->
+                @if($reports->count() >= 10 && $totalReports > 10)
+                    <div class="mt-3 text-center">
+                        <span class="do-links">
+                            <a href="{{ route('reports') }}" class="btn btn-primary">View all Reports</a>
+                        </span>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

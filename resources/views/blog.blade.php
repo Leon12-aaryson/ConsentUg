@@ -29,5 +29,8 @@
                 </div>
             @endforelse
         </div>
+        <div class="mt-4 center">
+            {{ $blogs->links() }}
+        </div>
     </div>
 @endsection

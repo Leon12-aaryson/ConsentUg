@@ -103,6 +103,8 @@ Route::get('/test-404', function() {
 // Front-end archives page
 Route::get('/archives', [ArchivesController::class, 'index'])->name('archives.index');
 
+Route::get('/reports', [ArchivesController::class, 'reportsIndex'])->name('reports');
+
 Route::resource('gallery', GalleryController::class);
 
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
