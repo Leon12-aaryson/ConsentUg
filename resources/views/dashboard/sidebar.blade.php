@@ -12,6 +12,7 @@
                     [route('dashboard.complaints.index'), 'bx-message-square-detail', 'Complaints'],
                     [route('users'), 'bx-user', 'Users'],
                     [route('dashboard.reports.index'), 'bx-file', 'Reports'],
+                    [route('gallery.index'), 'bx-image', 'Gallery Management'],
                     [route('settings'), 'bx-cog', 'Settings'],
                     [route('logout'), 'bx-log-out', 'Log out'],
                 ];

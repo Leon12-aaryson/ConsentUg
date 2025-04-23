@@ -64,6 +64,9 @@
                     <li class="nav-item my-auto">
                         <a class="nav-link" href="/blog">Blog</a>
                     </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="/archives">Archives</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav my-2 my-lg-0">
                     <li class="nav-item my-auto">
@@ -97,6 +100,7 @@
                         <li><a href="/what-we-do">What We Do</a></li>
                         <li><a href="/how-we-work">How We Work</a></li>
                         <li><a href="/blog">Blog</a></li>
+                        <li><a href="/archives">Archives</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">

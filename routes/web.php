@@ -11,6 +11,8 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\Dashboard\ReportController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ArchivesController;
 
 // Static Pages Routes
 Route::view('/', 'index')->name('home');
@@ -97,6 +99,11 @@ Route::get('/check-blogs', function () {
 Route::get('/test-404', function() {
     abort(404);
 });
+
+// Front-end archives page
+Route::get('/archives', [ArchivesController::class, 'index'])->name('archives.index');
+
+Route::resource('gallery', GalleryController::class);
 
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 
