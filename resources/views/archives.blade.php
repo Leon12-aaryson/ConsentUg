@@ -69,7 +69,7 @@
                     @else
                         @foreach($reports as $report)
                             <li class="list-group-item">
-                                <a href="{{ $report->file_url }}" target="_blank">{{ $report->title }}</a>
+                                <a href="{{ asset('storage/' . $report->file_path) }}" target="_blank">{{ $report->title }}</a>
                                 <small class="text-muted">{{ $report->created_at->format('M d, Y') }}</small>
                             </li>
                         @endforeach
